@@ -125,10 +125,42 @@
     margin-top: 20px;
 }
 
-.card-btn:hover{
+.card-btn:hover {
     background-color: transparent;
     color: #F5C518;
     border-color: #F5C518;
+}
+
+/* Edit Profile */
+
+#profile-image-container {
+    width: 150px;
+    height: 150px;
+    border: 6px solid #F5C518;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    margin: 15px 15%;
+}
+
+.page-description {
+    color: #999;
+}
+
+#bio {
+    max-width: 400px;
+}
+
+.form-control .disabled {
+    background-color: #bbb;
+}
+
+#change-password-container {
+    margin-top: 80px;
+}
+
+.edit-profile-page .card-btn{
+    width: 30%;
 }
 
 /* Footer */
