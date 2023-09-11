@@ -34,6 +34,48 @@
         $userData->email = $email;
         $userData->bio = $bio;
 
+        //Upload Image
+        if(isset($_FILES["image"]) && !empty($_FILES["image"]["tmp_name"])) {
+            // print_r($_FILES); exit;
+
+            $image = $_FILES["image"];
+            $imageTypes = ["image/jpeg","image/jpg","image/png"];
+
+            $ext = strtolower(substr($image['name'], -4));
+
+            //Checagem de tipo de Image
+            if(in_array($image["type"], $imageTypes)){
+
+                //Checagem JPG
+                if($ext == ".jpg" ?: $ext == ".jpeg"){
+                    
+                    $imageFile = imagecreatefromjpeg($image["tmp_name"]);
+                
+                //PNG
+                } else if ($ext == ".png") {
+
+                    $imageFile = imagecreatefrompng($image["tmp_name"]);
+
+                } else {
+
+                    $message->setMessage("Formato inválido de imagem!", "error", "back");
+
+                }
+
+                $imageName = $user->imageGenerateName($ext);
+
+                imagejpeg($imageFile, "./img/users/" . $imageName, 100);
+
+                $userData->image = $imageName;
+
+            } else {
+
+                $message->setMessage("Tipo inválido de arquivo!", "error", "back");
+
+            }
+
+        }
+
         $userDao->update($userData);
         
     //Atualizar senha do Usuário
