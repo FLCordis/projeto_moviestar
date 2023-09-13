@@ -81,6 +81,30 @@
     //Atualizar senha do Usuário
     } else if($type === "changepassword"){
 
+        //Preenche os dados do usuário
+        $password = filter_input(INPUT_POST, "password");
+        $confirmpassword = filter_input(INPUT_POST, "confirmpassword");
+
+        //Dados do user
+        $userData = $userDao->verifyToken();
+        $id = $userData->id;
+
+        if($password == $confirmpassword){
+
+            //Criar o objeto usuário
+            $user = new User();
+
+            $finalPassword = $user->generateHashPassword($password);
+
+            $user->password = $finalPassword;
+            $user->id = $id;
+
+            $userDao->changePassword($user);
+
+        } else {
+            $message->setMessage("As senhas não coencidem!", "error", "back");
+        }
+
     } else {
 
         $message->setMessage("Dados invalidos!", "error", "index.php");
