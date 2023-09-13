@@ -93,6 +93,78 @@
     padding: 40px;
 }
 
+.section-title {
+    font-size: 24px;
+    border-left: 4px solid #F5C518;
+    padding-left: 12px;
+    margin-top: 20px;
+}
+
+.section-description {
+    color: #f5f5f5;
+    font-size: 18px;
+}
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.movie-card {
+    background-color: #1A1A1A;
+    width: 18%;
+    margin-bottom: 30px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.movie-card .card-img-top {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-title {
+    height: 3rem;
+}
+
+.card-title a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.fas.fa-star {
+    color: #F5C518;
+}
+
+.rating {
+    color: #CCC;
+}
+
+.rate-btn {
+    margin-bottom: 15px;
+    color: #5799EF;
+    background-color: #333;
+    width: 100%;
+    font-weight: bold;
+}
+
+.rate-btn:hover {
+    background-color: #444;
+    border-color: #444;
+}
+
+.empty-list {
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+}
+
 /* Login & Register */
 #auto-row {
     justify-content: space-evenly;

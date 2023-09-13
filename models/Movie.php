@@ -20,7 +20,7 @@
 
         public function buildMovie($data);
         public function findAll();
-        public function getLastestMovies();
+        public function getLatestMovies();
         public function getMoviesByCategory($category);
         public function getMoviesByUserID($id);
         public function findByID($id);
