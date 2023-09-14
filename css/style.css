@@ -205,7 +205,8 @@
 
 /* Edit Profile */
 
-#profile-image-container {
+#profile-image-container,
+.profile-image-container {
     width: 150px;
     height: 150px;
     border: 6px solid #F5C518;
@@ -215,9 +216,14 @@
     margin: 15px 15%;
 }
 
+.profile-image-container {
+    width: 100px;
+    height: 100px;
+}
+
 .page-description {
     color: #999;
-}
+} 
 
 #bio {
     max-width: 400px;
@@ -231,8 +237,10 @@
     margin-top: 80px;
 }
 
-.edit-profile-page .card-btn{
-    width: 30%;
+.edit-profile-page .card-btn,
+#add-movie-container .card-btn,
+#review-form .card-btn {
+    width: auto;
 }
 
 /* New movie */
@@ -259,6 +267,138 @@
     display: block;
     margin: 0 auto;
     padding-top: 7px;
+}
+
+/* Movie */
+.page-title {
+    text-align: center;
+}
+
+.movies-container {
+    text-align: center;
+}
+
+.movie-details {
+    margin: 25px 0;
+}
+
+.pipe {
+    border: 1px solid #333;
+    margin: 0 10px;
+}
+
+#reviews-title {
+    margin-bottom: 25px;
+}
+
+#review-form-container {
+    background-color: #333;
+    padding: 20px;
+}
+
+#review-form-container select,
+#review-form-container textarea {
+    width: 50%;
+}
+
+#reviews-container {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 4px solid #F5C518;
+}
+
+.review {
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.author-details-container {
+    padding-top: 20px;
+}
+
+.author-name a {
+    text-decoration: none;
+    color: #F5C518;
+}
+
+.comment-title {
+    color: #999;
+}
+
+/* Dashboard */
+#add-movie-container {
+    text-align: right;
+}
+
+#movies-dashboard .table {
+    color: #FFF;
+}
+
+#movies-table th, #movies-table td {
+    background-color: #1A1A1A;
+    color: #FFF;
+}
+
+#movies-dashboard .table th {
+    font-size: 22px;
+    border-top: none;
+}
+#movies-dashboard .table tr {
+    padding: 15px 0;
+}
+
+.table-movie-title {
+    color: #FFF;
+    font-weight: bold;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.table-movie-title:hover {
+    color: #F5C518;
+}
+
+.actions-column {
+    max-width: 75px;
+    text-align: left;
+}
+
+.actions-column form {
+    display: inline-block;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-weight: bold;
+    transition: .5s;
+    border: none;
+}
+
+.edit-btn {
+    background-color: #0DCAF0;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.edit-btn:hover {
+    background-color: transparent;
+    color: #0DCAF0;
+}
+
+.delete-btn {
+    background-color: #DC3545;
+    color: #FFF;
+    /* Deixar o botão igual o Edit que ficou um pouco menor */
+    padding: 4px 10px; 
+}
+
+.delete-btn:hover {
+    background-color: transparent;
+    color: #DC3545;
+    text-decoration: none;
 }
 
 /* Footer */
