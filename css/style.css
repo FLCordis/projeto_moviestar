@@ -239,7 +239,8 @@
 
 .edit-profile-page .card-btn,
 #add-movie-container .card-btn,
-#review-form .card-btn {
+#review-form .card-btn,
+#edit-movie-form .card-btn {
     width: auto;
 }
 
@@ -254,6 +255,7 @@
 }
 
 .movie-image-container {
+    margin-top: 10%;
     height: 400px;
     min-width: 200px;
     background-position: center;
@@ -399,6 +401,16 @@
     background-color: transparent;
     color: #DC3545;
     text-decoration: none;
+}
+
+/* Edit Form */
+
+#edit-movie-form {
+    width: 75%;
+}
+
+#editmovie-image-container {
+    margin-top: 25%;
 }
 
 /* Footer */
