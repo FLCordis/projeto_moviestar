@@ -9,6 +9,7 @@ $latestMovies = $movieDao->getLatestMovies();
 
 $actionMovies = $movieDao->getMoviesByCategory("Ação");
 $comedyMovies = $movieDao->getMoviesByCategory("Comédia");
+$horrorMovies = $movieDao->getMoviesByCategory("Terror");
 
 ?>
 
@@ -36,6 +37,17 @@ $comedyMovies = $movieDao->getMoviesByCategory("Comédia");
             <p class="empty-list">Ainda não há filmes cadastrados!</p>
         <?php endif; ?>
     </div>
+    <h2 class="section-title">Terror</h2>
+    <p class="section-description">Veja os melhores filmes de terror!</p>
+    <div class="movies-container">
+        <?php foreach ($horrorMovies as $movie) : ?>
+            <?php require("templates/movie_card.php"); ?>
+        <?php endforeach; ?>
+
+        <?php if (count($horrorMovies) == 0) : ?>
+            <p class="empty-list">Ainda não há filmes cadastrados!</p>
+        <?php endif; ?>
+    </div>
     <h2 class="section-title">Comédia</h2>
     <p class="section-description">Veja os melhores filmes de comédia!</p>
     <div class="movies-container">
@@ -47,6 +59,7 @@ $comedyMovies = $movieDao->getMoviesByCategory("Comédia");
             <p class="empty-list">Ainda não há filmes cadastrados!</p>
         <?php endif; ?>
     </div>
+
 </div>
 
 <?php
